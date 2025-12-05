@@ -10,51 +10,26 @@ const ClassificationTable = ({ currentIMC }) => {
     { min: 40, max: 100, classification: 'Obesidade Grau III', color: '#fa5252' }
   ];
 
-  const isCurrentIMCInRange = (min, max) => {
-    return currentIMC && currentIMC >= min && currentIMC <= max;
-  };
-
   return (
     <div className="table-container">
       <h2>Classificação do IMC</h2>
-      <div className="table-info">
-        <p>Tabela de referência da Organização Mundial da Saúde</p>
-      </div>
-      
       <div className="classification-table">
         <div className="table-header">
           <div className="table-cell">IMC</div>
           <div className="table-cell">Classificação</div>
-          <div className="table-cell">Situação</div>
         </div>
         
         {classifications.map((item, index) => (
-          <div 
-            key={index} 
-            className={`table-row ${isCurrentIMCInRange(item.min, item.max) ? 'current' : ''}`}
-            style={isCurrentIMCInRange(item.min, item.max) ? { backgroundColor: `${item.color}15` } : {}}
-          >
+          <div key={index} className="table-row">
             <div className="table-cell">
-              <span className="imc-range">
-                {item.min === 0 ? `< ${item.max}` : 
-                 item.max === 100 ? `≥ ${item.min}` : 
-                 `${item.min} - ${item.max}`}
-              </span>
+              {item.min === 0 ? `< ${item.max}` : 
+               item.max === 100 ? `≥ ${item.min}` : 
+               `${item.min} - ${item.max}`}
             </div>
             <div className="table-cell">
-              <span 
-                className="classification-badge" 
-                style={{ backgroundColor: item.color }}
-              >
+              <span className="classification-badge" style={{ backgroundColor: item.color }}>
                 {item.classification}
               </span>
-            </div>
-            <div className="table-cell">
-              {isCurrentIMCInRange(item.min, item.max) ? (
-                <span className="current-indicator">Seu IMC está aqui</span>
-              ) : (
-                <span className="status-indicator">-</span>
-              )}
             </div>
           </div>
         ))}
