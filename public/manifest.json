@@ -1,0 +1,8 @@
+{
+  "short_name": "IMC Calculator",
+  "name": "Calculadora de IMC",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#6a11cb",
+  "background_color": "#ffffff"
+}
