@@ -43,9 +43,7 @@ const FormIMC = ({ onSubmit, onReset }) => {
     <div className="form-container">
       <form onSubmit={handleSubmit} className="imc-form">
         <div className="form-group">
-          <label htmlFor="height">
-            Altura (cm)
-          </label>
+          <label htmlFor="height">Altura (cm)</label>
           <input
             id="height"
             type="number"
@@ -61,9 +59,7 @@ const FormIMC = ({ onSubmit, onReset }) => {
         </div>
         
         <div className="form-group">
-          <label htmlFor="weight">
-            Peso (kg)
-          </label>
+          <label htmlFor="weight">Peso (kg)</label>
           <input
             id="weight"
             type="number"
@@ -79,19 +75,10 @@ const FormIMC = ({ onSubmit, onReset }) => {
         </div>
         
         <div className="button-group">
-          <button type="submit" className="btn btn-calculate">
-            Calcular IMC
-          </button>
-          <button type="button" onClick={handleReset} className="btn btn-reset">
-            Limpar
-          </button>
+          <button type="submit" className="btn btn-calculate">Calcular IMC</button>
+          <button type="button" onClick={handleReset} className="btn btn-reset">Limpar</button>
         </div>
       </form>
-      
-      <div className="form-info">
-        <p>Preencha sua altura em centímetros e peso em quilogramas.</p>
-        <p>O IMC será calculado automaticamente.</p>
-      </div>
     </div>
   );
 };
