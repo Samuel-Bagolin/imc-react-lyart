@@ -61,15 +61,10 @@ body {
   margin-bottom: 20px;
 }
 
-.imc-form {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
 .form-group {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .form-group label {
@@ -91,16 +86,6 @@ body {
   border-color: #6a11cb;
   outline: none;
   box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.1);
-}
-
-.form-group input.input-error {
-  border-color: #fa5252;
-}
-
-.error-message {
-  color: #fa5252;
-  font-size: 0.9rem;
-  margin-top: 5px;
 }
 
 .button-group {
@@ -139,19 +124,6 @@ body {
   background-color: #e9ecef;
   transform: translateY(-3px);
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
-}
-
-.form-info {
-  margin-top: 25px;
-  padding: 15px;
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  font-size: 0.95rem;
-  color: #666;
-}
-
-.form-info p {
-  margin-bottom: 5px;
 }
 
 .result-container {
@@ -231,6 +203,7 @@ body {
 .detail-value.classification {
   font-weight: 700;
   font-size: 1.1rem;
+  color: #6a11cb;
 }
 
 .table-container {
@@ -242,14 +215,9 @@ body {
 }
 
 .table-container h2 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: #333;
   font-size: 1.8rem;
-}
-
-.table-info {
-  margin-bottom: 25px;
-  color: #666;
 }
 
 .classification-table {
@@ -260,55 +228,26 @@ body {
   border: 1px solid #e9ecef;
 }
 
-.table-header {
-  display: flex;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  color: white;
-  font-weight: 600;
-}
-
 .table-row {
   display: flex;
   border-bottom: 1px solid #e9ecef;
-  transition: background-color 0.3s ease;
 }
 
 .table-row:last-child {
   border-bottom: none;
 }
 
-.table-row.current {
+.table-row.header {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
   font-weight: 600;
 }
 
 .table-cell {
   flex: 1;
-  padding: 18px 15px;
+  padding: 15px;
   display: flex;
   align-items: center;
-}
-
-.imc-range {
-  font-weight: 600;
-  color: #333;
-}
-
-.classification-badge {
-  padding: 8px 15px;
-  border-radius: 20px;
-  color: white;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.current-indicator {
-  color: #6a11cb;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.status-indicator {
-  color: #999;
 }
 
 .footer {
@@ -335,14 +274,6 @@ body {
     flex-direction: column;
   }
   
-  .table-header, .table-row {
-    flex-direction: column;
-  }
-  
-  .table-cell {
-    padding: 12px 15px;
-  }
-  
   .result-card {
     flex-direction: column;
     text-align: center;
@@ -350,5 +281,13 @@ body {
   
   .detail-row {
     justify-content: space-around;
+  }
+  
+  .table-row {
+    flex-direction: column;
+  }
+  
+  .table-cell {
+    padding: 12px 15px;
   }
 }
